@@ -1,23 +1,18 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import s from './app.sass';
+import React from 'react';
+import { Route } from 'react-router-dom'
+import People from './routes/People/People'
+import Header from "./components/Header/Header"
+import s from "./app.sass"
 
-console.log(s)
+const App = () => (
+	<div className={s.wrapper}>
+		<Header />
 
-class App extends Component {
-  render() {
-    return (
-      <div className={s.App}>
-        <div className={s["App-header"]}>
-          <img src={logo} className={s["App-logo"]} alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+		<main className={s.main}>
+			<Route exact path="/" component={People} />
+		</main>
+	</div>
+
+);
 
 export default App;
