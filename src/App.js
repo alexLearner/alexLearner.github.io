@@ -4,7 +4,7 @@ import People from "./routes/People/People"
 import NotFound from "./routes/NotFound/NotFound"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
-import s from "./app.sass"
+import s from "./App.sass"
 
 const App = () => (
 	<div className={s.wrapper}>
