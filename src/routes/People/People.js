@@ -1,6 +1,9 @@
 import React, { PureComponent } from "react"
 import { Link } from "react-router-dom"
 import s from "./People.sass"
+import cx from "classnames"
+import queryString from "querystring"
+import * as actions from "../../actions/people"
 import { bindActionCreators } from "redux"
 import { connect } from "react-redux"
 import peopleIcon from "../../img/people.png"
@@ -9,12 +12,11 @@ import chubacka from "../../img/chubacka.jpg"
 import Table from "../../components/Table/Table"
 import Search from "../../components/Search/Search"
 import Pagination from "../../components/Pagination/Pagination"
-import * as actions from "../../actions/people"
-import cx from "classnames"
-import queryString from "querystring"
+import scrollToPosition from "../../functions/scrollToPosition.js"
 
-const VISIBLE_COUNT = 10;
+const MAX_VISIBLE_COUNT = 10;
 const parseQuery = (search) => queryString.parse(search.replace("?", ""));
+
 
 class People extends PureComponent {
 	constructor(props) {
@@ -53,18 +55,18 @@ class People extends PureComponent {
 				delete query.search;
 			}
 
-			if (query.page && !prevSearch) {
+			if (query.page && !prevSearch || query.page && search) {
 				delete query.page;
 			}
+
 
 			this.props.history.push("?" + queryString.stringify(query));
 		}, 300)
 	}
 
 	scroll() {
-		// this.refs.search.refs.search.scrollIntoView({behavior: "smooth"});
+		scrollToPosition(this.refs.search.refs.search.offsetTop - 30, 300);
 	}
-
 
 	componentDidMount() {
 		const query = parseQuery(this.props.location.search);
@@ -118,7 +120,7 @@ class People extends PureComponent {
 				</div>
 
 				<Pagination
-					count={Math.floor((count - 1) / VISIBLE_COUNT)}
+					count={Math.floor((count - 1) / MAX_VISIBLE_COUNT)}
 					page={page}
 					onClick={this.scroll}
 					search={search} />
