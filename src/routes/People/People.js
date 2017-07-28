@@ -130,13 +130,7 @@ class People extends PureComponent {
 	}
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-	getPeople: actions.getPeople
-}, dispatch);
-
 export default connect(
-	state => ({
-		people: state.people,
-	}),
-	mapDispatchToProps
+	state => ({people: state.people}),
+	dispatch => bindActionCreators({getPeople: actions.getPeople}, dispatch)
 )(People)
