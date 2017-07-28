@@ -2,6 +2,7 @@
   "name": "starwars-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alexLearner.github.io/",
   "dependencies": {
     "antd": "^2.12.2",
     "autoprefixer": "7.1.1",
@@ -26,6 +27,7 @@
     "extract-text-webpack-plugin": "2.1.2",
     "file-loader": "0.11.2",
     "fs-extra": "3.0.1",
+    "gh-pages": "^1.0.0",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
     "object-assign": "4.1.1",
@@ -51,6 +53,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom"
