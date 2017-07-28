@@ -1,0 +1,23 @@
+@import "../../core.sass"
+
+.header
+	padding-bottom: 20px
+	border-bottom: 1px solid $border
+	margin-bottom: 40px
+	a
+		display: flex
+		align-items: flex-end
+		&:hover
+			.header_info
+				color: $gray - #444
+		
+	&_title
+		font-weight: normal
+		margin-right: 16px
+
+	&_info
+		font-size: 20px
+		color: $gray
+		margin-bottom: 4px
+		transition-duration: $transition-duration
+		

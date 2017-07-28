@@ -1,0 +1,41 @@
+@import "../../core.sass"
+
+.table
+	margin-top: 30px
+	font-size: 18px
+	width: 100%
+	table-layout: fixed
+	border: 1px solid $border
+	margin-bottom: 60px
+	border-spacing: 0
+	
+	thead
+		td
+			font-weight: bold
+			color: #000
+			border-top: 0
+			
+	td
+		padding: 20px
+		border-top: 1px solid $border
+		transition-duration: $transition-duration
+		
+	tbody tr:hover
+		td
+			background: #f1f1f1
+		
+	tbody
+		td:last-child
+			text-transform: uppercase
+			
+		td:nth-child(2)
+			text-transform: capitalize
+
+			
+
+.red
+	color: $red
+.blue
+	color: $blue
+.gray
+	color: $gray

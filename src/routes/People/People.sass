@@ -1,0 +1,64 @@
+@import "../../core.sass"
+
+.tabs
+	&_nav
+		border-bottom: 1px solid $border
+		display: flex
+		margin-bottom: 32px
+		
+		&_item
+			background: #fff
+			list-style: none
+			a
+				padding: 20px 30px
+				display: flex
+				align-items: center
+				justify-content: center
+			img
+				margin-right: 8px
+			
+			&_active
+				pointer-events: none
+				margin-bottom: -1px
+				border: 1px solid $border
+				border-bottom: 1px solid #fff
+				
+	&_container
+		position: relative
+		min-height: 300px
+
+.tabs_not_found
+	font-size: 30px
+	margin-top: 70px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	img
+		margin: 60px auto
+		
+.preloader
+	opacity: 0
+	transition-duration: $transition-duration
+	visibility: hidden
+	min-height: 400px
+	//height: 0
+	z-index: 1
+	position: absolute
+	display: flex
+	align-items: center
+	justify-content: center
+	background: #fff
+	left: 0
+	right: 0
+	bottom: 0
+	top: 0
+	img
+		width: 200px
+		height: 200px
+		display: block
+		
+	
+.visible
+	opacity: 1
+	visibility: visible

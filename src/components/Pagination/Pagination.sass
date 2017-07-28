@@ -1,0 +1,33 @@
+@import "../../core.sass"
+
+.pagination
+	border: 1px solid $border
+	display: table
+	margin: 30px auto
+	
+	&_item
+		display: table-cell
+		transition-duration: $transition-duration
+		
+		&:first-child a
+			border-left: 0
+	a
+		width: 60px
+		height: 60px
+		display: block
+		transition-duration: $transition-duration
+		border-left: 2px solid $border
+		text-align: center
+		line-height: 60px
+		color: $blue
+
+		&:hover
+			background: #fff - #111
+		
+		&:active
+			background: #fff - #222
+			
+.active
+	a
+		pointer-events: none !important
+		color: $gray

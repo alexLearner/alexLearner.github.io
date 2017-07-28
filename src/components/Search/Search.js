@@ -12,12 +12,13 @@ class Search extends PureComponent {
 	change(e) {
 		const
 			{value} = e.target,
+			prevValue = this.state.value,
 			{onChange} = this.props;
 
 		this.setState({value});
 
 		if (onChange) {
-			onChange(value)
+			onChange(value, prevValue)
 		}
 	}
 
@@ -27,7 +28,10 @@ class Search extends PureComponent {
 				className={s.search}
 				value={this.state.value}
 			  onChange={this.change}
-			  name="q"
+			  type="search"
+				ref="search"
+			  placeholder="Start typing for search..."
+			  name="search"
 			/>
 		)
 	}
