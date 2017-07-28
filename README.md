@@ -8,5 +8,6 @@ Based on create-react-app (https://github.com/facebookincubator/create-react-app
 npm i
 npm start - develop mode
 npm run build - production mode
+serve -s build
 ```
 
