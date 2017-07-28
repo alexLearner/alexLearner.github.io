@@ -2,7 +2,7 @@
   "name": "starwars-test",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://alexLearner.github.io/",
+  "homepage": "https://alexLearner.github.io/starwars/",
   "dependencies": {
     "antd": "^2.12.2",
     "autoprefixer": "7.1.1",

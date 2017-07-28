@@ -1,5 +1,4 @@
-import fetch from 'isomorphic-fetch';
-import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
+import fetch from "isomorphic-fetch";
 import forEach from "lodash/forEach"
 import store from "store"
 
@@ -18,7 +17,7 @@ export default class API {
 
 	fetch(url, obj = {}) {
 		obj.headers = {
-			'Accept': 'application/json',
+			"Accept": "application/json",
 			"Content-Type": "application/json"
 		};
 
@@ -57,7 +56,7 @@ export default class API {
 		let result = [];
 		forEach(object, (val, key) =>
 			val
-				? result.push(encodeURIComponent(key) + '=' + encodeURIComponent(val))
+				? result.push(encodeURIComponent(key) + "=" + encodeURIComponent(val))
 				: null
 		);
 
@@ -65,7 +64,7 @@ export default class API {
 			return "";
 		}
 
-		return "?" + result.join('&');
+		return "?" + result.join("&");
 	}
 
 	people(params) {

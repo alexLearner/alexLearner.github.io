@@ -1,4 +1,4 @@
-import React, { PureComponent }  from 'react';
+import React, { PureComponent }  from "react";
 import s from "./Table.sass"
 import moment from "moment"
 
@@ -35,7 +35,7 @@ const TABLE_FIELDS = [
 	{
 		name: "created",
 		title: "Created at",
-		cb: date => moment(date).format('DD/MM/YYYY hh:mm:ss a')
+		cb: date => moment(date).format("DD/MM/YYYY hh:mm:ss a")
 	}
 ];
 

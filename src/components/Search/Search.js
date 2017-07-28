@@ -1,4 +1,4 @@
-import React, { PureComponent }  from 'react';
+import React, { PureComponent }  from "react";
 import s from "./Search.sass"
 
 class Search extends PureComponent {

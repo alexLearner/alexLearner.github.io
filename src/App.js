@@ -1,7 +1,7 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom'
-import People from './routes/People/People'
-import NotFound from './routes/NotFound/NotFound'
+import React from "react";
+import { Route, Switch } from "react-router-dom"
+import People from "./routes/People/People"
+import NotFound from "./routes/NotFound/NotFound"
 import Header from "./components/Header/Header"
 import Footer from "./components/Footer/Footer"
 import s from "./app.sass"
@@ -13,7 +13,7 @@ const App = () => (
 
 			<main className={s.main}>
 				<Switch>
-					<Route exact path="/" component={People} />
+					<Route path="/" component={People} />
 					<Route component={NotFound} />
 				</Switch>
 			</main>

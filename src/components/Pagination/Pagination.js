@@ -1,6 +1,6 @@
-import React, { PureComponent }  from 'react';
+import React from "react";
 import s from "./Pagination.sass"
-import {Link} from 'react-router-dom'
+import {Link} from "react-router-dom"
 import cx from "classnames"
 
 export default props => {
