@@ -10,7 +10,7 @@ Used API - http://swapi.co/
 npm i
 ```
 
-##### Develop mode
+#### Develop mode
 ``` npm start ```
 
 #### Production mode
