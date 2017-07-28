@@ -55,7 +55,7 @@ class People extends PureComponent {
 				delete query.search;
 			}
 
-			if (query.page && !prevSearch || query.page && search) {
+			if ((query.page && !prevSearch) || (query.page && search)) {
 				delete query.page;
 			}
 
