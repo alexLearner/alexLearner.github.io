@@ -6,10 +6,10 @@ Used API - http://swapi.co/
 
 #### Get started
 
-```javascript
+```bash
 npm i
 npm start - develop mode
 npm run build - production mode
-serve -s build
+serve -s build - production server
 ```
 
